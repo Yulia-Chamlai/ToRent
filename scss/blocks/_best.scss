@@ -1,0 +1,37 @@
+.best {
+  text-align: end;
+  &__img {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    @include desktop-small {
+      min-height: 600px;
+    }
+    @include tablet-small {
+      min-height: 400px;
+    }
+    &-info {
+      padding-top: 68px;
+    }
+    &-title {
+      @include text($font-secondary, 400, 48px, 48px, $white);
+      margin-bottom: 15px;
+      @include tablet-small {
+        font-size: 36px;
+      }
+      @include tablet-small {
+        font-size: 28px;
+      }
+    }
+
+    &-btn {
+      background-color: #020202;
+      padding: 16px 17px;
+      @include text($font-primary, 400, 18px, 18px, $white);
+      display: inline-block;
+      border: none;
+      outline: none;
+    }
+  }
+}

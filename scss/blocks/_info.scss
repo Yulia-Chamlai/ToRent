@@ -1,0 +1,142 @@
+.info {
+  background-color: $black;
+  padding: 100px 0;
+  @include tablet {
+    padding: 50px 10px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @include desktop-small {
+      flex-wrap: wrap;
+      justify-content: unset;
+    }
+    @include tablet {
+      display: block;
+    }
+  }
+  &__title {
+    @include text($font-secondary, 400, 48px, 48px, $white);
+    text-align: center;
+    @include tablet {
+      font-size: 36px;
+    }
+  }
+  &__managers {
+    max-width: 297px;
+    @include tablet {
+      margin: auto;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__managers-title {
+    margin-bottom: 27px;
+  }
+  &__managers-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__managers-item {
+    text-align: center;
+  }
+
+  &__managers-avatar {
+    max-width: 100px;
+    margin-bottom: 22px;
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+  &__managers-list {
+    margin-bottom: 43px;
+  }
+
+  &__managers-link {
+    @include text($font-primary, 400, 18px, 21px, $white);
+  }
+
+  &__managers-btn {
+    padding: 16px 21px;
+    background-color: $white;
+    @include text($font-primary, 400, 18px, 18px, $black);
+    border: none;
+    outline: none;
+  }
+  .info__blog {
+    @include desktop-small {
+      justify-items: start;
+      margin-left: 150px;
+      @include tablet {
+        margin: auto;
+        max-width: 450px;
+        width: 100%;
+      }
+    }
+  }
+  &__blog-title {
+    margin-bottom: 47px;
+  }
+
+  &__blog-item {
+    position: relative;
+    @include text($font-primary, 400, 18px, 18px, $white);
+    margin-bottom: 28px;
+    padding-left: 67px;
+    @include tablet {
+      padding-left: 50px;
+    }
+    a {
+      color: $white;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-image: url("./images/blog-arrow.svg");
+      background-repeat: no-repeat;
+      top: -4px;
+      left: 0;
+    }
+  }
+
+  &__review {
+    max-width: 300px;
+    @include desktop-small {
+      max-width: 100%;
+      padding-top: 50px;
+    }
+    @include tablet {
+      margin: auto;
+      max-width: 450px;
+      width: 100%;
+    }
+  }
+
+  &__review-title {
+    margin-bottom: 48px;
+  }
+
+  &__review-img {
+    max-width: 300px;
+    img {
+      width: 300px;
+      height: 127px;
+    }
+  }
+
+  &__review-text {
+    @include text($font-primary, 400, 18px, 21px, $white);
+    margin: 22px 0;
+  }
+
+  &__review-link {
+    padding: 16px 28px;
+    background-color: $white;
+    @include text($font-primary, 400, 18px, 21px, $black);
+    display: inline-block;
+  }
+}

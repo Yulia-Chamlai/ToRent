@@ -1,0 +1,35 @@
+.slider {
+  position: relative;
+  &__item {
+    min-height: 600px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mobile {
+      min-height: 400px;
+    }
+  }
+}
+.slick-arrow {
+  border: none;
+  outline: none;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.slick-prev {
+  left: 20px;
+  @include mobile {
+    left: 12px;
+  }
+}
+
+.slick-next {
+  right: 20px;
+  @include mobile {
+    right: 12px;
+  }
+}

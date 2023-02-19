@@ -1,0 +1,16 @@
+.footer {
+  &__logo {
+    max-width: 392px;
+    margin: auto;
+    @include desktop-small {
+      max-width: 300px;
+    }
+  }
+
+  &__img {
+    max-width: 392px;
+    @include desktop-small {
+      max-width: 300px;
+    }
+  }
+}

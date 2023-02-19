@@ -1,0 +1,77 @@
+.header {
+  padding-top: 88px;
+  text-align: center;
+  padding: 0 10px;
+  @include desktop-small {
+    padding-top: 50px;
+  }
+
+  &__logo-img {
+    max-width: 392px;
+    @include desktop-small {
+      max-width: 300px;
+    }
+  }
+
+  &__menu {
+    margin-top: 60px;
+    border-top: 2px solid $accent-color;
+    @include desktop-small {
+      margin-top: 50px;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__list-item {
+    display: block;
+    width: 300px;
+    padding: 36px 0;
+    text-align: center;
+    align-items: center;
+    border-left: 1px solid $accent-color;
+    transition: $transition;
+    @include desktop-small {
+      max-width: 200px;
+    }
+    @include tablet {
+      width: 100%;
+      min-width: 100%;
+      border-bottom: 1px solid $accent-color;
+      border-left: none;
+    }
+    @include tablet-small {
+      padding: 28px 0;
+    }
+    &:last-child {
+      border-right: 1px solid $accent-color;
+      @include tablet {
+        border-right: none;
+      }
+    }
+    &:hover {
+      background-color: $black;
+    }
+    &--active {
+      background-color: $black;
+    }
+  }
+
+  &__list-link {
+    padding: 0 10px;
+    @include text($font-primary, 400, 24px, 28px, $gray);
+    transition: $transition;
+    @include tablet {
+      font-size: 28px;
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+}

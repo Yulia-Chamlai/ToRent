@@ -1,0 +1,95 @@
+.search {
+  &__inner {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    @include tablet {
+      margin-top: 50px;
+      padding: 0 10px 0 10px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    @include text($font-primary, 400, 24px, 24px, $accent-color);
+    @include tablet {
+      flex-wrap: wrap;
+      min-width: 700px;
+      text-align: center;
+    }
+    @include tablet-small {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+
+  &__form-label {
+    max-width: 156px;
+    @include tablet {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__form-input {
+    margin-left: 69px;
+    border: 2px solid $accent-color;
+    padding: 23px 15px;
+    min-width: 431px;
+    height: 70px;
+    @include text($font-primary, 400, 18px, 24px, $gray);
+    @include tablet {
+      margin-left: 0;
+      width: 100%;
+      font-size: 24px;
+      text-align: center;
+      min-width: 0;
+    }
+    @include tablet-small {
+      width: 100%;
+      padding: 15px 15px;
+      height: 54px;
+    }
+
+    &::placeholder {
+      @include text($font-primary, 400, 18px, 24px, $gray);
+      @include tablet {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__form-btn {
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: $accent-color;
+    padding: 23px 23px 23px 36px;
+    @include text($font-primary, 400, 24px, 24px, $white);
+    @include tablet {
+      width: 100%;
+      font-size: 24px;
+      padding: 15px 23px 15px 36px;
+    }
+  }
+  &__form-btn::before {
+    position: absolute;
+    content: "";
+    background-image: url("./images/search.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    top: 20px;
+    left: 280px;
+    @include tablet-small {
+      display: none;
+    }
+  }
+}
+br {
+  @include tablet {
+    display: none;
+  }
+}

@@ -1,0 +1,94 @@
+.services {
+  &__inner {
+    margin: 100px auto;
+    display: flex;
+    gap: 129px;
+    @include desktop-small {
+      margin: 50px auto;
+      flex-direction: column;
+    }
+    @include tablet {
+      gap: 50px;
+    }
+  }
+
+  &__item {
+    max-width: 470px;
+    @include desktop-small {
+      max-width: 100%;
+    }
+  }
+
+  &__item-title {
+    position: relative;
+    @include text($font-secondary, 400, 36px, 36px, $black);
+    padding-left: 136px;
+    margin-bottom: 20px;
+    @include desktop-small {
+      padding-left: 73px;
+    }
+    @include mobile {
+      font-size: 28px;
+      line-height: 32px;
+    }
+    &--time::before {
+      position: absolute;
+      content: "";
+      width: 103px;
+      height: 103px;
+      top: 0;
+      left: 0;
+      background-image: url("./images/services/time-icon.svg");
+      background-repeat: no-repeat;
+      @include desktop-small {
+        width: 52px;
+        height: 52px;
+        background-size: cover;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &--world::before {
+      position: absolute;
+      content: "";
+      width: 103px;
+      height: 103px;
+      top: 0;
+      left: 0;
+      background-image: url("./images/services/world-icon.svg");
+      background-repeat: no-repeat;
+      @include desktop-small {
+        width: 52px;
+        height: 52px;
+        background-size: cover;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__item-text {
+    @include text($font-primary, 400, 18px, 24px, $black);
+    margin-bottom: 45px;
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item-link {
+    position: relative;
+    padding-left: 36px;
+    @include text($font-primary, 400, 18px, 24px, $gray);
+    text-decoration: underline;
+    &::before {
+      position: absolute;
+      content: "";
+      top: -3px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-image: url("./images/services/preview-arrow.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
